@@ -21,6 +21,9 @@ class SequenceRepresentation(object):
     def __str__(self):
         return ''.join(self.__rev_translation_dict[x] for x in self.seq_rep)
 
+    def __len__(self):
+        return len(self.seq_rep)
+
 
 class SeqCartesianProduct(object):
     def __init__(self, *seqences:Iterable[SequenceRepresentation]):
